@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>Espresso House CMS</title>
+  <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
+
+<script>if(localStorage.getItem("cms_auth")!=="ok"){window.location.href="auth.html";}</script>
+</head>
+<body>
+  <script>
+    window.CMS_CONFIG = {
+      backend: {
+        name: 'github',
+        repo: 'espressohouseco/espressohouse-menu',
+        branch: 'main',
+        client_id: 'Ov23li9zk4qN39hsCuYG'
+      }
+    };
+  </script>
+  <script>
+    CMS.init(window.CMS_CONFIG);
+  </script>
+</body>
+</html>

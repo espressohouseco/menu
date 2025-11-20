@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>ورود مدیر</title>
+<style>
+  body {font-family: sans-serif; direction: rtl; text-align: center; margin-top: 10%;}
+  input {padding: 8px; margin: 10px; width: 180px;}
+  button {padding: 8px 20px;}
+</style>
+<script>
+function login() {
+  const u = document.getElementById('user').value;
+  const p = document.getElementById('pass').value;
+  if (u==='shahram' && p==='reza') {
+    localStorage.setItem('cms_auth','ok');
+    window.location.href='index.html';
+  } else {
+    alert('نام کاربری یا رمز عبور اشتباه است');
+  }
+}
+</script>
+</head>
+<body>
+  <h2>ورود به پنل مدیریت</h2>
+  <input id="user" placeholder="نام کاربری"><br>
+  <input id="pass" type="password" placeholder="رمز عبور"><br>
+  <button onclick="login()">ورود</button>
+</body>
+</html>
