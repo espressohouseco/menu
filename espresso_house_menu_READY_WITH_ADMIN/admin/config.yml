@@ -2,6 +2,8 @@ backend:
   name: github
   repo: espressohouseco/espressohouse-menu
   branch: main
+  base_url: https://menu.espressohouse-co.workers.dev
+  auth_endpoint: auth
 
 media_folder: "images"
 public_folder: "/images"
@@ -14,29 +16,37 @@ collections:
         name: "main_menu"
         file: "index.html"
         fields:
-          - {label: "نوشیدنی گرم", name: "hot_drinks", widget: "list", fields: [
-              {label: "نام فارسی", name: "fa", widget: "string"},
-              {label: "نام انگلیسی", name: "en", widget: "string"},
-              {label: "توضیح", name: "desc", widget: "string", required: false},
-              {label: "قیمت", name: "price", widget: "string"},
-              {label: "تصویر", name: "image", widget: "image"}
-            ]}
-          - {label: "نوشیدنی سرد", name: "cold_drinks", widget: "list", fields: [
-              {label: "نام فارسی", name: "fa", widget: "string"},
-              {label: "نام انگلیسی", name: "en", widget: "string"},
-              {label: "توضیح", name: "desc", widget: "string", required: false},
-              {label: "قیمت", name: "price", widget: "string"},
-              {label: "تصویر", name: "image", widget: "image"}
-            ]}
-          - {label: "کیک", name: "cakes", widget: "list", fields: [
-              {label: "نام فارسی", name: "fa", widget: "string"},
-              {label: "نام انگلیسی", name: "en", widget: "string"},
-              {label: "قیمت", name: "price", widget: "string"},
-              {label: "تصویر", name: "image", widget: "image"}
-            ]}
-          - {label: "ساندویچ", name: "sandwiches", widget: "list", fields: [
-              {label: "نام فارسی", name: "fa", widget: "string"},
-              {label: "نام انگلیسی", name: "en", widget: "string"},
-              {label: "قیمت", name: "price", widget: "string"},
-              {label: "تصویر", name: "image", widget: "image"}
-            ]}
+          - label: "نوشیدنی گرم"
+            name: "hot_drinks"
+            widget: "list"
+            fields:
+              - {label: "نام فارسی", name: "fa", widget: "string"}
+              - {label: "نام انگلیسی", name: "en", widget: "string"}
+              - {label: "توضیح", name: "desc", widget: "text", required: false}
+              - {label: "قیمت", name: "price", widget: "string"}
+              - {label: "تصویر", name: "image", widget: "image"}
+          - label: "نوشیدنی سرد"
+            name: "cold_drinks"
+            widget: "list"
+            fields:
+              - {label: "نام فارسی", name: "fa", widget: "string"}
+              - {label: "نام انگلیسی", name: "en", widget: "string"}
+              - {label: "توضیح", name: "desc", widget: "text", required: false}
+              - {label: "قیمت", name: "price", widget: "string"}
+              - {label: "تصویر", name: "image", widget: "image"}
+          - label: "کیک"
+            name: "cakes"
+            widget: "list"
+            fields:
+              - {label: "نام فارسی", name: "fa", widget: "string"}
+              - {label: "نام انگلیسی", name: "en", widget: "string"}
+              - {label: "قیمت", name: "price", widget: "string"}
+              - {label: "تصویر", name: "image", widget: "image"}
+          - label: "ساندویچ"
+            name: "sandwiches"
+            widget: "list"
+            fields:
+              - {label: "نام فارسی", name: "fa", widget: "string"}
+              - {label: "نام انگلیسی", name: "en", widget: "string"}
+              - {label: "قیمت", name: "price", widget: "string"}
+              - {label: "تصویر", name: "image", widget: "image"}
