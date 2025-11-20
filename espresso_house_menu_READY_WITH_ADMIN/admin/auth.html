@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>ورود مدیریت - اسپرسو هاوس</title>
+  <style>
+    body {direction:rtl; font-family:tahoma; background:#1b1512; color:#fff; text-align:center; padding-top:120px;}
+    input {margin:6px; padding:8px;}
+    button {padding:8px 20px; background:#fff; border:none; cursor:pointer;}
+  </style>
+  <script>
+    async function login(e) {
+      e.preventDefault();
+      const user = document.getElementById('user').value;
+      const pass = document.getElementById('pass').value;
+      if (user === 'shahram' && pass === 'reza') {
+        localStorage.setItem('decap_auth','ok');
+        location.href = '/admin/';
+      } else {
+        alert('نام کاربری یا رمز اشتباه است!');
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>ورود به پنل مدیریت اسپرسو هاوس</h2>
+  <form onsubmit="login(event)">
+    <input id="user" placeholder="نام کاربری"><br>
+    <input id="pass" type="password" placeholder="رمز عبور"><br>
+    <button type="submit">ورود</button>
+  </form>
+</body>
+</html>
